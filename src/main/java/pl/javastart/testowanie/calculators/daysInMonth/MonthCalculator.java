@@ -1,4 +1,4 @@
-package pl.javastart.testowanie;
+package pl.javastart.testowanie.calculators.daysInMonth;
 
 import java.time.YearMonth;
 

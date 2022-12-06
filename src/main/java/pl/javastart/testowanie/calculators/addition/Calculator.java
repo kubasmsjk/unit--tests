@@ -1,4 +1,4 @@
-package pl.javastart.testowanie;
+package pl.javastart.testowanie.calculators.addition;
 
 public class Calculator {
     public int add(int a, int b){

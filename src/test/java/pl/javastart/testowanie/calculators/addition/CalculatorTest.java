@@ -1,9 +1,8 @@
-package pl.javastart.testowanie;
+package pl.javastart.testowanie.calculators.addition;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
+import pl.javastart.testowanie.calculators.addition.Calculator;
 
 class CalculatorTest {
 

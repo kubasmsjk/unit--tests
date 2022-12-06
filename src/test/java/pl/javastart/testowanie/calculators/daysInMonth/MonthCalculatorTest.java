@@ -1,12 +1,22 @@
-package pl.javastart.testowanie;
+package pl.javastart.testowanie.calculators.daysInMonth;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import pl.javastart.testowanie.calculators.daysInMonth.MonthCalculator;
+
 
 public class MonthCalculatorTest {
 
-    private MonthCalculator monthCalculator = new MonthCalculator();
+    private MonthCalculator monthCalculator;
+    @BeforeEach
+    public void init(){
+        monthCalculator = new MonthCalculator();
+    }
 
+
+    @DisplayName("Days in 06.2018")
     @Test
     public void shouldReturn30For2018_06() {
         // when
@@ -15,7 +25,7 @@ public class MonthCalculatorTest {
         // then
         Assertions.assertEquals(30, dayCount);
     }
-
+    @DisplayName("Days in 07.2018")
     @Test
     public void shouldReturn31For2018_07() {
         // when
@@ -24,7 +34,7 @@ public class MonthCalculatorTest {
         // then
         Assertions.assertEquals(31, dayCount);
     }
-
+    @DisplayName("Days in 08.2018")
     @Test
     public void shouldReturn31For2018_08() {
         // when
@@ -33,7 +43,7 @@ public class MonthCalculatorTest {
         // then
         Assertions.assertEquals(31, dayCount);
     }
-
+    @DisplayName("Days in 02.2018")
     @Test
     public void shouldReturn28For2018_02() {
         // when
@@ -43,6 +53,7 @@ public class MonthCalculatorTest {
         Assertions.assertEquals(28, dayCount);
     }
 
+    @DisplayName("Days in 02.2016")
     @Test
     public void shouldReturn29For2016_02() {
         // when
@@ -51,7 +62,7 @@ public class MonthCalculatorTest {
         // then
         Assertions.assertEquals(29, dayCount);
     }
-
+    @DisplayName("Days in 02.2010")
     @Test
     public void shouldReturn28For2010_02() {
         // when
@@ -60,7 +71,7 @@ public class MonthCalculatorTest {
         // then
         Assertions.assertEquals(28, dayCount);
     }
-
+    @DisplayName("Days in 02.2000")
     @Test
     public void shouldReturn28For2000_02() {
         // when
@@ -69,7 +80,7 @@ public class MonthCalculatorTest {
         // then
         Assertions.assertEquals(29, dayCount);
     }
-
+    @DisplayName("Days in 02.2100")
     @Test
     public void shouldReturn28For2100_02() {
         // when

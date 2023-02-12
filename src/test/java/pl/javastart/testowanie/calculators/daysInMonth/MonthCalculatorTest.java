@@ -103,9 +103,9 @@ public class MonthCalculatorTest {
     @DisplayName("Days of the month for the year")
     @ParameterizedTest(name = "Year {arguments} month has 31 days")
     @CsvSource({"2018,07", "2018,08"})
-    public void shouldReturn31ForMonthInYear(String year, String month) {
+    public void shouldReturn31ForMonthInYear(int year,int month) {
         // when
-        int dayCount = monthCalculator.getDayCount(Integer.parseInt(year), Integer.parseInt(month));
+        int dayCount = monthCalculator.getDayCount(year, month);
 
         // then
         Assertions.assertEquals(31, dayCount);
@@ -114,9 +114,9 @@ public class MonthCalculatorTest {
     @DisplayName("Days of the month for the year")
     @ParameterizedTest(name = "Year {arguments} month has 30 days")
     @CsvSource("2018,06")
-    public void shouldReturn30ForMonthInYear(String year, String month) {
+    public void shouldReturn30ForMonthInYear(int year,int month) {
         // when
-        int dayCount = monthCalculator.getDayCount(Integer.parseInt(year), Integer.parseInt(month));
+        int dayCount = monthCalculator.getDayCount(year, month);
 
         // then
         Assertions.assertEquals(30, dayCount);
@@ -125,9 +125,9 @@ public class MonthCalculatorTest {
     @DisplayName("Days of the month for the year")
     @ParameterizedTest(name = "Year {arguments} month has 29 days")
     @CsvSource({"2016,02", "2000,02"})
-    public void shouldReturn29ForMonthInYear(String year, String month) {
+    public void shouldReturn29ForMonthInYear(int year,int month) {
         // when
-        int dayCount = monthCalculator.getDayCount(Integer.parseInt(year), Integer.parseInt(month));
+        int dayCount = monthCalculator.getDayCount(year, month);
 
         // then
         Assertions.assertEquals(29, dayCount);
@@ -136,9 +136,9 @@ public class MonthCalculatorTest {
     @DisplayName("Days of the month for the year")
     @ParameterizedTest(name = "Year {arguments} month has 28 days" )
     @CsvSource({"2018,02", "2010,02","2100,02"})
-    public void shouldReturn28ForMonthInYear(String year,String month) {
+    public void shouldReturn28ForMonthInYear(int year,int month) {
         // when
-        int dayCount = monthCalculator.getDayCount(Integer.parseInt(year), Integer.parseInt(month));
+        int dayCount = monthCalculator.getDayCount(year, month);
 
         // then
         Assertions.assertEquals(28, dayCount);
